@@ -39,5 +39,7 @@ after('after:run', () => {
 
     let specNameArquivo = Cypress.spec.name;
 
-    cy.log({ results, specNameArquivo });
+    cy.task('sendResults', { results, specNameArquivo }).then(results => {
+        console.log(results)
+    });
 });
