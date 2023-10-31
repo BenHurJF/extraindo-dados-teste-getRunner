@@ -7,7 +7,6 @@ Este projeto Cypress tem como objetivo demonstrar como extrair dados de teste de
 ## Pré-requisitos
 
 - Node.js instalado
-- Cypress instalado globalmente
 
 ## Instalação
 
