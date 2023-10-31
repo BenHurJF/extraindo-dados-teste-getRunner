@@ -1,4 +1,4 @@
-describe('template spec', () => {
+describe('SUITE DE TESTES', () => {
   it('Teste 1', () => {
     cy.visit('https://example.cypress.io')
   })

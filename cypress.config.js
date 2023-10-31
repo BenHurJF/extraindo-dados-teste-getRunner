@@ -15,10 +15,9 @@ module.exports = defineConfig({
             pending: results.pending,
             tituloPassed: results.passedTests.join('\n\n'),
             tituloFailed: results.failedTests.join('\n\n'),
-            // tituloPendente: results.pendingTests.join('\n\n'),
+            tituloPendente: results.pendingTests.join('\n\n'),
             currentSuite: results.currentSuite,
           };
-          // console.log(body)
           return body;
         }
       });

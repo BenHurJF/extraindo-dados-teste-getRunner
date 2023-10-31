@@ -8,7 +8,7 @@ after('after:run', () => {
     const pending = runner.stats.pending;
     const passedTests = [];
     const failedTests = [];
-    // const pendingTests = [];
+    const pendingTests = [];
     let currentSuite = '';
 
     runner.suite.eachTest((test) => {
@@ -22,7 +22,7 @@ after('after:run', () => {
         } else if (test.state === 'failed') {
             failedTests.push(`❌ ${itName} \n\n ${test.err.stack} \n`); // adicionar somente o nome do IT aos testes falhos e Também o motivo da falha
         } else {
-            // pendingTests.push(`⌛ ${itName}`); // adicionar somente o nome do IT aos testes pendentes
+            pendingTests.push(`⌛ ${itName}`); // adicionar somente o nome do IT aos testes pendentes
         }
     });
 
@@ -34,7 +34,7 @@ after('after:run', () => {
         currentSuite, // adicionar o nome da suíte da spec ao objeto results
         passedTests,
         failedTests,
-        // pendingTests
+        pendingTests
     };
 
     let specNameArquivo = Cypress.spec.name;
